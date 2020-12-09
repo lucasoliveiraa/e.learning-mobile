@@ -10,10 +10,6 @@ import { useNavigation } from '@react-navigation/native';
 const Landing: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleSignIn = () => {
-    navigation.navigate('SignIn');
-  }
-
   return (
     <>
       <ImageBackground source={eLearning}>
@@ -21,7 +17,7 @@ const Landing: React.FC = () => {
           <Image source={landingImage} />
           <Title>Aprenda da melhor forma</Title>
           <SubTitle>Entre na plataforma e acesse cursos de diversas áreas de conhecimento.</SubTitle>
-          <Button onPress={handleSignIn}>
+          <Button onPress={() => navigation.navigate('SignIn')}>
             <TextButton>Começar os estudos</TextButton>
           </Button>
 
